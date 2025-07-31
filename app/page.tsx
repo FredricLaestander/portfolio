@@ -22,10 +22,7 @@ export default async function Home() {
         <div className='flex gap-4'>
           {/* <Card title="Work" />
           <Card title="Skills" /> */}
-          <Card
-            title='About'
-            images={about.images.map((image) => urlFor(image).url())}
-          />
+          <Card title='about' about={about} />
         </div>
       </section>
 
