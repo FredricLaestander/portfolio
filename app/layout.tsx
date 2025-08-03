@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${outfit.className} w-full antialiased`}>
+      <body className={`${outfit.className} w-full font-medium antialiased`}>
         {children}
       </body>
     </html>
