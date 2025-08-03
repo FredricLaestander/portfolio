@@ -2,8 +2,8 @@ import Image from 'next/image'
 import happy from '../public/happy.svg'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { getAbout } from '@/sanity/routes'
-import { Card } from '@/components/card'
-import { urlFor } from '@/sanity/lib/image'
+import { About } from '@/components/cardVariants/about'
+import { Skills } from '@/components/cardVariants/skills'
 
 export default async function Home() {
   // const heroText = await getHeroText();
@@ -20,9 +20,9 @@ export default async function Home() {
         <h1 className='text-5xl leading-[4rem] font-bold'>{about.heroText}</h1>
 
         <div className='flex gap-4'>
-          {/* <Card title="Work" />
-          <Card title="Skills" /> */}
-          <Card title='about' about={about} />
+          {/* <Card title="Work" /> */}
+          <Skills about={about} />
+          <About about={about} />
         </div>
       </section>
 
