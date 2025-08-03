@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${outfit.className} w-full font-medium antialiased`}>
+      <body
+        className={`${outfit.className} w-full bg-slate-50 font-medium antialiased`}
+      >
         {children}
       </body>
     </html>
