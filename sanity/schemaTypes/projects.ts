@@ -1,51 +1,65 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType } from 'sanity'
 
 export const projects = defineType({
-  name: "projects",
-  type: "document",
+  name: 'projects',
+  type: 'document',
   fields: [
     defineField({
-      name: "title",
-      type: "string",
+      name: 'title',
+      type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "images",
-      type: "array",
-      of: [{ type: "image" }],
+      name: 'background_color',
+      title: 'Background color',
+      description: 'Requires valid CSS color',
+      type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "links",
-      type: "object",
+      name: 'light_text',
+      title: 'Light text',
+      description: 'Toggle to enable light text',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'images',
+      type: 'array',
+      of: [{ type: 'image' }],
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'links',
+      type: 'object',
       fields: [
         defineField({
-          name: "live_deployment",
-          title: "Live deployment",
-          type: "url",
+          name: 'live_deployment',
+          title: 'Live deployment',
+          type: 'url',
         }),
         defineField({
-          name: "repository",
-          type: "url",
+          name: 'repository',
+          type: 'url',
         }),
       ],
     }),
     defineField({
-      name: "tech_stack",
-      title: "Tech stack",
-      type: "array",
+      name: 'tech_stack',
+      title: 'Tech stack',
+      type: 'array',
       of: [
         {
-          type: "object",
+          type: 'object',
           fields: [
             defineField({
-              name: "label",
-              type: "string",
+              name: 'label',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "url",
-              type: "url",
+              name: 'url',
+              type: 'url',
               validation: (rule) => rule.required(),
             }),
           ],
@@ -53,10 +67,10 @@ export const projects = defineType({
       ],
     }),
     defineField({
-      name: "description",
-      type: "array",
-      of: [{ type: "block" }],
+      name: 'description',
+      type: 'array',
+      of: [{ type: 'block' }],
       validation: (rule) => rule.required(),
     }),
   ],
-});
+})

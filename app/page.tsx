@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import happy from '../public/happy.svg'
 import { Github, Linkedin, Mail } from 'lucide-react'
-import { getAbout } from '@/sanity/routes'
+import { getAbout, getProjects } from '@/sanity/routes'
 import { About } from '@/components/cardVariants/about'
 import { Skills } from '@/components/cardVariants/skills'
+import { Projects } from '@/components/cardVariants/projects'
 
 export default async function Home() {
   // const heroText = await getHeroText();
   const about = await getAbout()
+  const projects = await getProjects()
 
   return (
     <main className='flex h-screen flex-col items-center justify-between p-20'>
@@ -17,10 +19,12 @@ export default async function Home() {
       </div>
 
       <section className='flex flex-col items-center gap-16'>
-        <h1 className='text-5xl leading-[4rem] font-bold'>{about.heroText}</h1>
+        <h1 className='text-5xl leading-[4rem] font-bold text-slate-900'>
+          {about.heroText}
+        </h1>
 
         <div className='flex gap-4'>
-          {/* <Card title="Work" /> */}
+          <Projects projects={projects} />
           <Skills about={about} />
           <About about={about} />
         </div>
@@ -29,7 +33,7 @@ export default async function Home() {
       <div className='flex gap-3'>
         <a
           href='https://github.com/FredricLaestander/'
-          className='flex items-center gap-1 text-sm font-bold text-slate-800'
+          className='flex items-center gap-1 text-sm font-bold'
         >
           <Github className='size-6' />
           <p className='text-sm'>Github</p>
@@ -37,7 +41,7 @@ export default async function Home() {
 
         <a
           href='https://www.linkedin.com/in/fredric-laestander/'
-          className='flex items-center gap-1 text-sm font-bold text-slate-800'
+          className='flex items-center gap-1 text-sm font-bold'
         >
           <Linkedin className='size-6' />
           LinkedIn
@@ -45,7 +49,7 @@ export default async function Home() {
 
         <a
           href='https://github.com/FredricLaestander/'
-          className='flex items-center gap-1 text-sm font-bold text-slate-800'
+          className='flex items-center gap-1 text-sm font-bold'
         >
           <Mail className='size-6' />
           Mail

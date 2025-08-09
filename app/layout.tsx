@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${outfit.className} w-full bg-slate-50 font-medium antialiased`}
+        className={`${outfit.className} w-full bg-slate-50 font-medium text-slate-800 antialiased`}
       >
         {children}
       </body>

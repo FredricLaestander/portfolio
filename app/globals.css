@@ -3,3 +3,16 @@
 @theme inline {
   --color-skyblue: #80caff;
 }
+
+.modal {
+  transition: all 200ms ease-in allow-discrete;
+  opacity: 1;
+
+  transform: translateY(0);
+}
+@starting-style {
+  .modal {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
