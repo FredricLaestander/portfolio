@@ -19,7 +19,7 @@ export const Skills = ({ about }: { about: About }) => {
       </Card>
 
       {openModal && (
-        <Modal close={() => setOpenModal(false)}>
+        <Modal centered close={() => setOpenModal(false)}>
           <ModalCard>
             <h3 className='w-full text-lg'>Skills</h3>
             <ul className='flex flex-wrap gap-6'>

@@ -4,6 +4,11 @@
   --color-skyblue: #80caff;
 }
 
+*:focus,
+*:focus-visible {
+  @apply outline-skyblue outline-offset-1;
+}
+
 .modal {
   transition: all 200ms ease-in allow-discrete;
   opacity: 1;
