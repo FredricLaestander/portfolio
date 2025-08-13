@@ -17,7 +17,7 @@ export const About = ({ about }: { about: TAbout }) => {
 
   return (
     <>
-      <Card title='about' onClick={() => setOpenModal(true)} grid>
+      <Card title='About' onClick={() => setOpenModal(true)} grid>
         {about.images.slice(0, 3).map((image, index) => {
           const url = urlFor(image).width(256).quality(100).url()
           return (

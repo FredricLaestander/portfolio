@@ -20,7 +20,7 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
   return (
     <>
       <Card
-        title='work'
+        title='Work'
         onClick={() => {
           setOpenModal(true)
         }}

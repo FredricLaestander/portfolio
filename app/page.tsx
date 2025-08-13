@@ -23,7 +23,7 @@ export default async function Home() {
           {about.heroText}
         </h1>
 
-        <div className='flex gap-4'>
+        <div className='group flex h-60 w-[38rem] gap-4'>
           <Projects projects={projects} />
           <Skills about={about} />
           <About about={about} />

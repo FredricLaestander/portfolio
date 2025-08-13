@@ -15,7 +15,7 @@ export const Skills = ({ about }: { about: About }) => {
   return (
     <>
       <Card title='Skills' onClick={() => setOpenModal(true)}>
-        <Image src={smiley} alt='a drawn thumb figure' className='w-20' />
+        <Image src={smiley} alt='a drawn thumb figure' className='w-[60%]' />
       </Card>
 
       {openModal && (
