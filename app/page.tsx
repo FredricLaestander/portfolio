@@ -1,31 +1,57 @@
-import Image from "next/image";
-import happy from "../public/happy.svg";
+import Image from 'next/image'
+import happy from '../public/happy.svg'
+import linkedIn from '../public/linkedIn.svg'
+import { Mail } from 'lucide-react'
+import { getAbout, getProjects } from '@/sanity/routes'
+import { About } from '@/components/cardVariants/about'
+import { Skills } from '@/components/cardVariants/skills'
+import { Projects } from '@/components/cardVariants/projects'
+import { SiGithub } from '@icons-pack/react-simple-icons'
+import { Social } from '@/components/social'
 
-export default function Home() {
+export default async function Home() {
+  // const heroText = await getHeroText();
+  const about = await getAbout()
+  const projects = await getProjects()
+
   return (
-    <main className="flex flex-col gap-8 h-screen items-center justify-center">
-      <div className="flex flex-col gap-2 items-center">
-        <Image src={happy} alt="Happy squares logo" className="size-32" />
-        <h1 className="text-4xl">Welcome to Fredric Laestanders portfolio</h1>
-        <h2 className="text-2xl">
-          This website is under construction... stay tuned!
-        </h2>
+    <main className='flex h-screen flex-col items-center gap-8 p-4 md:p-20'>
+      <div className='flex w-full items-center gap-2'>
+        <Image src={happy} alt='Happy squares logo' className='size-8' />
+        <p className='font-bold text-slate-900'>Fredric Laestander</p>
       </div>
-      <a
-        className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-        href="https://github.com/FredricLaestander/portfolio"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          className="light:invert"
-          src="/github.svg"
-          alt="Github logomark"
-          width={20}
-          height={20}
-        />
-        Portfolio source code
-      </a>
+
+      <section className='flex h-full w-full flex-col justify-center'>
+        <div className='flex flex-col items-center gap-6 pb-16'>
+          <h1 className='w-full py-8 text-center text-3xl font-bold text-slate-900 md:text-5xl md:leading-[4rem]'>
+            {about.heroText}
+          </h1>
+
+          <div className='group flex w-full flex-col gap-4 md:h-60 md:w-[38rem] md:flex-row'>
+            <Projects projects={projects} />
+            <Skills about={about} />
+            <About about={about} />
+          </div>
+        </div>
+      </section>
+
+      <footer className='fixed bottom-0 z-20 flex w-full justify-center gap-4 bg-slate-50/50 py-2 backdrop-blur-md'>
+        <Social href='https://github.com/FredricLaestander/' icon={SiGithub}>
+          Github
+        </Social>
+
+        <a
+          href='https://www.linkedin.com/in/fredric-laestander/'
+          className='flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-bold transition hover:bg-slate-200'
+        >
+          <Image src={linkedIn} alt='linkedin' className='size-5' />
+          LinkedIn
+        </a>
+
+        <Social href='mailto:fredriclaestander@gmail.com' icon={Mail}>
+          Mail
+        </Social>
+      </footer>
     </main>
-  );
+  )
 }

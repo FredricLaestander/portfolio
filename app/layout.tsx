@@ -1,27 +1,29 @@
-import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Outfit } from 'next/font/google'
+import './globals.css'
 
 const outfit = Outfit({
-  subsets: ["latin"],
-});
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
-  title: "Laestander",
-  description: "Fredic Laestander. Fullstack developer portfolio",
-  icons: { icon: "/favicon.svg" },
-};
+  title: 'Laestander',
+  description: 'Fredic Laestander. Fullstack developer portfolio',
+  icons: { icon: '/favicon.svg' },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${outfit.className} antialiased w-full`}>
+    <html lang='en'>
+      <body
+        className={`${outfit.className} w-full bg-slate-50 font-medium text-slate-800 antialiased`}
+      >
         {children}
       </body>
     </html>
-  );
+  )
 }

@@ -32,6 +32,7 @@ export const about = defineType({
     defineField({
       name: "socials",
       type: "array",
+      validation: (rule) => rule.required(),
       of: [
         {
           type: "object",
@@ -43,11 +44,18 @@ export const about = defineType({
             }),
             defineField({
               name: "icon",
+              description: "Pick an icon at simpleicons.org",
               type: "string",
+              validation: (rule) => rule.required(),
             }),
             defineField({
               name: "url",
               type: "url",
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: "color",
+              type: "string",
               validation: (rule) => rule.required(),
             }),
           ],
@@ -68,11 +76,18 @@ export const about = defineType({
             }),
             defineField({
               name: "icon",
+              description: "Pick an icon at simpleicons.org",
               type: "string",
+              validation: (rule) => rule.required(),
             }),
             defineField({
               name: "url",
               type: "url",
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: "color",
+              type: "string",
               validation: (rule) => rule.required(),
             }),
           ],
