@@ -10,7 +10,7 @@ export const Social = ({
   children: ReactNode
 }) => {
   return (
-    <a href={href} className='flex items-center gap-1 text-sm font-bold'>
+    <a href={href} className='flex items-center gap-1 p-2 text-sm font-bold'>
       <Icon className='size-7' />
       {children}
     </a>
