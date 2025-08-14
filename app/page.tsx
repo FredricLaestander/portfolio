@@ -35,16 +35,16 @@ export default async function Home() {
         </div>
       </section>
 
-      <footer className='fixed bottom-0 z-20 flex w-full justify-center gap-6 bg-slate-50/50 py-2 backdrop-blur-md'>
+      <footer className='fixed bottom-0 z-20 flex w-full justify-center gap-4 bg-slate-50/50 py-2 backdrop-blur-md'>
         <Social href='https://github.com/FredricLaestander/' icon={SiGithub}>
           Github
         </Social>
 
         <a
           href='https://www.linkedin.com/in/fredric-laestander/'
-          className='flex items-center gap-1 p-2 text-sm font-bold'
+          className='flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-bold transition hover:bg-slate-200'
         >
-          <Image src={linkedIn} alt='linkedin' className='size-7' />
+          <Image src={linkedIn} alt='linkedin' className='size-5' />
           LinkedIn
         </a>
 

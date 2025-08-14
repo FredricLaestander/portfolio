@@ -43,12 +43,12 @@ export const About = ({ about }: { about: TAbout }) => {
       </Card>
 
       {openModal && (
-        <Modal centered close={() => setOpenModal(false)}>
+        <Modal classname='md:justify-center' close={() => setOpenModal(false)}>
           <ModalCard>
             <h3 className='w-full text-lg'>About</h3>
 
             <PortableText value={about.introduction} />
-            <div className='flex w-full gap-2 overflow-hidden rounded-sm'>
+            <div className='flex w-full gap-2 overflow-x-scroll rounded-sm'>
               {about.images.map((image) => {
                 const url = urlFor(image).url()
                 return (
@@ -58,7 +58,7 @@ export const About = ({ about }: { about: TAbout }) => {
                     alt=''
                     width={160}
                     height={256}
-                    className='object-cover'
+                    className='rounded-sm object-cover'
                   />
                 )
               })}
