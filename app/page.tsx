@@ -10,12 +10,11 @@ import { SiGithub } from '@icons-pack/react-simple-icons'
 import { Social } from '@/components/social'
 
 export default async function Home() {
-  // const heroText = await getHeroText();
   const about = await getAbout()
   const projects = await getProjects()
 
   return (
-    <main className='flex h-screen flex-col items-center gap-8 p-4 md:p-20'>
+    <main className='flex flex-col items-center gap-8 p-4 md:h-screen md:p-20'>
       <div className='flex w-full items-center gap-2'>
         <Image src={happy} alt='Happy squares logo' className='size-8' />
         <p className='font-bold text-slate-900'>Fredric Laestander</p>
