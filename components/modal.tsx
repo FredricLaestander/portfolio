@@ -12,7 +12,7 @@ export const Modal = ({
   return (
     <div
       onClick={close}
-      className={`fixed inset-0 z-20 flex flex-col items-center gap-4 overflow-y-scroll rounded-3xl bg-slate-400/20 pt-20 pb-8 backdrop-blur-lg ${centered && 'justify-center'}`}
+      className={`fixed inset-0 z-30 flex flex-col items-center gap-4 overflow-y-scroll bg-slate-400/20 p-6 backdrop-blur-lg md:rounded-3xl md:pt-20 md:pb-8 ${centered && 'justify-center'}`}
     >
       {children}
     </div>

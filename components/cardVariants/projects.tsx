@@ -59,7 +59,7 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
               lightText={project.light_text}
             >
               <div className='flex flex-col items-center'>
-                <div className='mb-6 flex gap-4'>
+                <div className='mb-6 flex w-full justify-center gap-2 md:gap-4'>
                   {project.images.map((image) => {
                     const url = urlFor(image).url()
                     return (
@@ -69,13 +69,13 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
                         alt=''
                         width={image.metadata.dimensions.width}
                         height={image.metadata.dimensions.height}
-                        className='w-40 rounded-xl'
+                        className='w-24 rounded-xl md:w-40'
                       />
                     )
                   })}
                 </div>
 
-                <div className='mb-2 flex w-full justify-between'>
+                <div className='mb-2 flex w-full flex-col justify-between gap-1 md:flex-row md:gap-0'>
                   <h3 className='text-xl font-bold'>{project.title}</h3>
                   <div className='flex gap-4'>
                     {project.links.live_deployment && (
@@ -120,7 +120,7 @@ const Link = ({ href, children }: { href: string; children: string }) => {
       rel='noopener noreferrer'
       className='flex items-center gap-1'
     >
-      <ArrowUpRight className='size-6' />
+      <ArrowUpRight className='text-skyblue size-6' />
       {children}
     </a>
   )
