@@ -14,7 +14,7 @@ export const Modal = ({
     <>
       <button
         onClick={close}
-        className='fixed top-6 right-6 z-40 cursor-pointer rounded-full bg-slate-50 p-2 hover:bg-white'
+        className='fixed top-6 right-6 z-40 cursor-pointer rounded-full bg-slate-100 p-2 hover:bg-white'
       >
         <X className='size-6' />
       </button>
