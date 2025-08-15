@@ -12,6 +12,8 @@ export const Social = ({
   return (
     <a
       href={href}
+      target='_blank'
+      rel='noopener noreferrer'
       className='flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-bold transition hover:bg-slate-200'
     >
       <Icon className='size-6' />
