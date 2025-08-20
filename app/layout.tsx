@@ -7,9 +7,11 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Laestander',
-  description: 'Fredic Laestander. Fullstack developer portfolio',
+  title: 'Fredric Laestander | Fullstack Web Developer',
+  description:
+    'Fullstack web developer Fredric Laestander creates open source projects and modern web applications, combining clean code with responsive, engaging design. Connect via my portfolio.',
   icons: { icon: '/favicon.svg' },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
 }
 
 export default function RootLayout({
