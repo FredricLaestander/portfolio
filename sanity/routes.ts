@@ -12,3 +12,10 @@ export const getProjects = async (): Promise<Project[]> => {
     '*[_type == "projects"]{..., images[]{..., "metadata": asset->metadata}}',
   )
 }
+
+export const getOpengraph = async (): Promise<{
+  heroText: string
+  ogText: string
+}> => {
+  return await client.fetch('*[_type == "about"]{heroText, ogText}[0]')
+}
