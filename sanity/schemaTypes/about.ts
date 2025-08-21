@@ -1,61 +1,61 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType } from 'sanity'
 
 export const about = defineType({
-  name: "about",
-  title: "About",
-  type: "document",
+  name: 'about',
+  title: 'About',
+  type: 'document',
   fields: [
     defineField({
-      name: "heroText",
-      title: "Hero text",
-      type: "string",
+      name: 'heroText',
+      title: 'Hero text',
+      type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "introduction",
-      type: "array",
-      of: [{ type: "block" }],
+      name: 'introduction',
+      type: 'array',
+      of: [{ type: 'block' }],
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "description",
-      type: "array",
-      of: [{ type: "block" }],
+      name: 'description',
+      type: 'array',
+      of: [{ type: 'block' }],
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "images",
-      type: "array",
-      of: [{ type: "image" }],
+      name: 'images',
+      type: 'array',
+      of: [{ type: 'image' }],
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "socials",
-      type: "array",
+      name: 'socials',
+      type: 'array',
       validation: (rule) => rule.required(),
       of: [
         {
-          type: "object",
+          type: 'object',
           fields: [
             defineField({
-              name: "label",
-              type: "string",
+              name: 'label',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "icon",
-              description: "Pick an icon at simpleicons.org",
-              type: "string",
+              name: 'icon',
+              description: 'Pick an icon at simpleicons.org',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "url",
-              type: "url",
+              name: 'url',
+              type: 'url',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "color",
-              type: "string",
+              name: 'color',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
           ],
@@ -63,36 +63,42 @@ export const about = defineType({
       ],
     }),
     defineField({
-      name: "skills",
-      type: "array",
+      name: 'skills',
+      type: 'array',
       of: [
         {
-          type: "object",
+          type: 'object',
           fields: [
             defineField({
-              name: "label",
-              type: "string",
+              name: 'label',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "icon",
-              description: "Pick an icon at simpleicons.org",
-              type: "string",
+              name: 'icon',
+              description: 'Pick an icon at simpleicons.org',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "url",
-              type: "url",
+              name: 'url',
+              type: 'url',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: "color",
-              type: "string",
+              name: 'color',
+              type: 'string',
               validation: (rule) => rule.required(),
             }),
           ],
         },
       ],
+    }),
+    defineField({
+      name: 'ogText',
+      title: 'OpenGraph hero text',
+      type: 'string',
+      validation: (rule) => rule.required(),
     }),
   ],
-});
+})

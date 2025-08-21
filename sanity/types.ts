@@ -8,6 +8,7 @@ export type About = SanityDocument & {
   images: (Image & { metadata: ImageMetadata })[]
   socials: { label: string; icon: string; url: string; color: string }[]
   skills: { label: string; icon: string; url: string; color: string }[]
+  ogText: string
 }
 
 export type Project = SanityDocument & {
