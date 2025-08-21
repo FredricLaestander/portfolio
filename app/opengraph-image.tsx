@@ -23,7 +23,6 @@ export default async function Image() {
     (
       <div
         style={{
-          backgroundImage: `url("${process.env.NEXT_PUBLIC_BASE_URL}/metadataHero.jpg")`,
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -31,6 +30,16 @@ export default async function Image() {
           color: '#0F172A',
         }}
       >
+        <img
+          src={`${process.env.NEXT_PUBLIC_BASE_URL}/metadataHero.jpg`}
+          alt='Background'
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
         <p
           style={{
             position: 'absolute',
