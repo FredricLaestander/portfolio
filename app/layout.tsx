@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Fullstack web developer Fredric Laestander creates open source projects and modern web applications, combining clean code with responsive, engaging design. Connect via my portfolio.',
   icons: { icon: '/favicon.svg' },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
 }
 
 export default function RootLayout({
