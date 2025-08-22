@@ -23,7 +23,7 @@ export const Card = ({
       >
         {children}
       </div>
-      <p className='text-lg font-bold text-slate-700'>{title}</p>
+      <h2 className='text-lg font-bold text-slate-700'>{title}</h2>
     </button>
   )
 }
