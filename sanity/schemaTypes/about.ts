@@ -38,6 +38,7 @@ export const about = defineType({
               type: 'string',
             },
           ],
+          validation: (rule) => rule.required(),
         }),
       ],
       validation: (rule) => rule.required(),
