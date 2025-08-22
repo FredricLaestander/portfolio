@@ -21,7 +21,7 @@ export const Modal = ({
 
       <div
         onClick={close}
-        className={`fixed inset-0 z-30 flex flex-col items-center gap-4 overflow-y-scroll bg-slate-400/20 p-4 backdrop-blur-lg md:rounded-3xl md:pt-20 md:pb-8 ${classname}`}
+        className={`fixed inset-0 z-30 flex flex-col items-center gap-4 overflow-y-scroll bg-slate-400/20 p-4 backdrop-blur-lg md:pt-20 md:pb-8 ${classname}`}
       >
         {children}
       </div>

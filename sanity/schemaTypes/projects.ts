@@ -26,7 +26,21 @@ export const projects = defineType({
     defineField({
       name: 'images',
       type: 'array',
-      of: [{ type: 'image' }],
+      of: [
+        defineField({
+          name: 'image',
+          type: 'image',
+          options: { hotspot: true },
+          fields: [
+            {
+              name: 'alt',
+              description: 'Important for SEO and accessibility',
+              type: 'string',
+            },
+          ],
+          validation: (rule) => rule.required(),
+        }),
+      ],
       validation: (rule) => rule.required(),
     }),
     defineField({

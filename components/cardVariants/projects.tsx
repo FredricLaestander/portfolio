@@ -32,7 +32,7 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
             <Image
               key={url}
               src={url}
-              alt=''
+              alt={image.alt}
               width={image.metadata.dimensions.width}
               height={image.metadata.dimensions.height}
               className={`${card} ${index === 0 && '-rotate-6'} ${index === 1 && 'z-10 mb-2'} ${index === 2 && 'rotate-6'}`}
@@ -66,7 +66,7 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
                       <Image
                         key={url}
                         src={url}
-                        alt=''
+                        alt={image.alt}
                         width={image.metadata.dimensions.width}
                         height={image.metadata.dimensions.height}
                         className='w-24 rounded-xl md:w-40'
