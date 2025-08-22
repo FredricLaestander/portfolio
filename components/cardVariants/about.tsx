@@ -55,7 +55,7 @@ export const About = ({ about }: { about: TAbout }) => {
                   <Image
                     key={url}
                     src={url}
-                    alt=''
+                    alt={image.alt}
                     width={160}
                     height={256}
                     className='rounded-sm object-cover'
