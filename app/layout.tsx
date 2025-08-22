@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Fredric Laestander | Fullstack Web Developer',
   description:
     'Fullstack web developer Fredric Laestander creates open source projects and modern web applications, combining clean code with responsive, engaging design. Connect via my portfolio.',
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: '/favicon.svg', apple: '/favicon.svg' },
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
 }
 
