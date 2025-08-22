@@ -9,7 +9,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: 'Fredric Laestander | Fullstack Web Developer',
   description:
-    'Fullstack web developer Fredric Laestander creates open source projects and modern web applications, combining clean code with responsive, engaging design. Connect via my portfolio.',
+    'Fredric Laestander is a developer who creates fullstack open source projects and modern web applications, combining clean code with responsive, engaging design.',
   icons: { icon: '/favicon.svg', apple: '/favicon.svg' },
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
 }
