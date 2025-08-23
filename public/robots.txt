@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://laestander.dev
+
+# Sitemaps
+Sitemap: https://laestander.dev/sitemap.xml
