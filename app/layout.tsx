@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description:
     'Fredric Laestander is a developer who creates fullstack open source projects and modern web applications, combining clean code with responsive, engaging design.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
+  appleWebApp: { title: 'Laestander' },
 }
 
 export default function RootLayout({
