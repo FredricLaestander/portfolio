@@ -45,7 +45,7 @@ export default async function Home() {
           rel='noopener noreferrer'
           className='flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-bold transition hover:bg-slate-200'
         >
-          <Image src={linkedIn} alt='linkedin' className='size-5' />
+          <Image src={linkedIn} alt='' className='size-5' />
           LinkedIn
         </a>
 
