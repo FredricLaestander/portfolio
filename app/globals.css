@@ -7,7 +7,7 @@
 }
 
 * {
-  @apply transition-colors;
+  transition: background-color 200ms ease-out;
 }
 
 .card-transition {
