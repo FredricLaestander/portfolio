@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import happy from '../public/happy.svg'
-import linkedIn from '../public/linkedIn.svg'
 import { Mail } from 'lucide-react'
 import { getAbout, getProjects } from '@/sanity/routes'
 import { About } from '@/components/cardVariants/about'
@@ -9,6 +8,7 @@ import { Projects } from '@/components/cardVariants/projects'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { Social } from '@/components/social'
 import { ThemeSwitch } from '@/components/themeSwitch'
+import { LinkedinIcon } from '@/components/linkedinIcon'
 
 export default async function Home() {
   const about = await getAbout()
@@ -19,14 +19,14 @@ export default async function Home() {
       <div className='flex w-full items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Image src={happy} alt='Happy squares logo' className='size-8' />
-          <p className='font-bold text-slate-900'>Fredric Laestander</p>
+          <p className='font-bold'>Fredric Laestander</p>
         </div>
         <ThemeSwitch />
       </div>
 
       <section className='flex h-full w-full flex-col justify-center'>
         <div className='flex flex-col items-center gap-6 pb-16'>
-          <h1 className='w-full py-8 text-center text-3xl font-bold text-slate-900 md:text-5xl md:leading-[4rem]'>
+          <h1 className='w-full py-8 text-center text-3xl font-bold md:text-5xl md:leading-[4rem]'>
             {about.heroText}
           </h1>
 
@@ -38,20 +38,17 @@ export default async function Home() {
         </div>
       </section>
 
-      <footer className='fixed bottom-0 z-20 flex w-full justify-center gap-4 bg-slate-50/50 py-2 backdrop-blur-md'>
+      <footer className='fixed bottom-0 z-20 flex w-full justify-center gap-4 bg-slate-50/50 py-2 backdrop-blur-md dark:bg-slate-900/50'>
         <Social href='https://github.com/FredricLaestander/' icon={SiGithub}>
           Github
         </Social>
 
-        <a
+        <Social
           href='https://www.linkedin.com/in/fredric-laestander/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-bold transition hover:bg-slate-200'
+          icon={LinkedinIcon}
         >
-          <Image src={linkedIn} alt='' className='size-5' />
           LinkedIn
-        </a>
+        </Social>
 
         <Social href='mailto:fredriclaestander@gmail.com' icon={Mail}>
           Mail

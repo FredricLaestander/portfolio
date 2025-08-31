@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark' suppressHydrationWarning>
       <body
-        className={`${outfit.className} w-full bg-slate-50 font-medium text-slate-800 antialiased`}
+        className={`${outfit.className} w-full bg-slate-50 font-medium text-slate-800 antialiased dark:bg-slate-900 dark:text-slate-200`}
       >
         <Providers>{children}</Providers>
       </body>
