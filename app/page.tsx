@@ -8,6 +8,7 @@ import { Skills } from '@/components/cardVariants/skills'
 import { Projects } from '@/components/cardVariants/projects'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { Social } from '@/components/social'
+import { ThemeSwitch } from '@/components/themeSwitch'
 
 export default async function Home() {
   const about = await getAbout()
@@ -15,9 +16,12 @@ export default async function Home() {
 
   return (
     <main className='flex flex-col items-center gap-8 p-4 md:h-screen md:p-20'>
-      <div className='flex w-full items-center gap-2'>
-        <Image src={happy} alt='Happy squares logo' className='size-8' />
-        <p className='font-bold text-slate-900'>Fredric Laestander</p>
+      <div className='flex w-full items-center justify-between'>
+        <div className='flex items-center gap-2'>
+          <Image src={happy} alt='Happy squares logo' className='size-8' />
+          <p className='font-bold text-slate-900'>Fredric Laestander</p>
+        </div>
+        <ThemeSwitch />
       </div>
 
       <section className='flex h-full w-full flex-col justify-center'>
