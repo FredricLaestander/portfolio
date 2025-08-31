@@ -1,7 +1,27 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-skyblue: #80caff;
+}
+
+* {
+  transition: background-color 200ms ease-out;
+}
+
+.card-transition {
+  transition: flex-basis 400ms ease-in-out;
+}
+
+.card-circle-transition {
+  transition:
+    width 500ms ease-in-out,
+    height 500ms ease-in-out;
+}
+
+.theme-toggle-transition {
+  transition: translate 100ms ease-in-out;
 }
 
 *:focus,

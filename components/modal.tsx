@@ -14,14 +14,14 @@ export const Modal = ({
     <>
       <button
         onClick={close}
-        className='fixed top-6 right-6 z-40 cursor-pointer rounded-full bg-slate-100 p-2 hover:bg-white'
+        className='fixed top-6 right-6 z-40 cursor-pointer rounded-full bg-slate-100 p-2 hover:bg-white dark:bg-slate-900 dark:hover:bg-slate-950'
       >
         <X className='size-6' />
       </button>
 
       <div
         onClick={close}
-        className={`fixed inset-0 z-30 flex flex-col items-center gap-4 overflow-y-scroll bg-slate-400/20 p-4 backdrop-blur-lg md:pt-20 md:pb-8 ${classname}`}
+        className={`fixed inset-0 z-30 flex flex-col items-center gap-4 overflow-y-scroll bg-slate-400/20 p-4 backdrop-blur-lg md:pt-20 md:pb-8 dark:bg-slate-600/20 ${classname}`}
       >
         {children}
       </div>
