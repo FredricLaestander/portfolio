@@ -12,6 +12,7 @@ export const ThemeSwitch = () => {
 
   return (
     <button
+      aria-label='Toggle theme'
       onClick={toggleTheme}
       className='flex h-6 w-12 cursor-pointer items-center rounded-full border-2 border-slate-200 bg-slate-100 p-0.5 transition dark:border-slate-800 dark:bg-slate-700'
     >
